@@ -1,4 +1,6 @@
-
+*{
+  max-width: 100%;
+}
 /*styling background*/
 body{
   min-height: 100vh;
