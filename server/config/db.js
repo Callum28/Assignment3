@@ -1,4 +1,4 @@
 module.exports=
 {
-    "URI": "mongodb://localhost/todolist"
+    "URI": "mongodb+srv://callumtait1:l9qavBCRjCf7fhIn@cluster0.h93lfp6.mongodb.net/task-list"
 }
