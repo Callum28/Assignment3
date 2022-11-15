@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+  <link rel='stylesheet' href='/content/app1.css' />
+  <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+<!--title-->
+            <h1>Add Task</h1>
+            <!--creating add form-->
+            <form class="form" method="post">
+
+                <div class="form-group">
+                    <label for="titleTextField">Task Title</label>
+                    <input type="text" class="form-control" 
+                    id="titleTextField"
+                    placeholder="Enter the Task Title"
+                    name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descTextField">Description</label>
+                    <textarea type="text" class="form-control" 
+                    id="descTextField"
+                    placeholder="Enter the description of the Task"
+                    name="description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dueTextField">Due</label>
+                    <input type="text" class="form-control" 
+                    id="dueTextField"
+                    placeholder="Enter the due date of the Task"
+                    name="due" required>
+                </div>
+
+                <!--Submit button-->
+                <button class="btn btn-primary" type="submit">submit
+                </button>
+
+                <!--cancel button-->
+                <a href="/task-list" class="btn btn-warning"> ❌Cancel</a>
+                </form>
+                </div>
+
+
+
+    <!--Footer section-->
+    <footer>
+        <p>©️ 2022 by Callum Tait</p>
+    </footer>
+
+</body>
+</html>

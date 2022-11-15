@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+  <link rel="stylesheet" href='/css/font-awesome.min.css'/>
+  <link rel="stylesheet" href="/content/app1.css">
+  <script src="/scripts/app.js"></script>  
+</head>
+
+<body>
+<!--creating title-->
+  <h1 class="taskheader">Task List</h1>
+
+  <!--Creating table to show rows-->
+      <table class="table table-borderd  table-hover">
+      <tr class="d-flex" bgcolor="#454545" >
+      <th class="text-center col-3 ">Task</th>
+      <th class="text-center col-5 ">Description</th>
+      <th class="text-center  col-2 ">Due</th>
+      <th class="text-center col-1"></th>
+      <th class="text-center col-1"></th>
+      </tr>
+      <!--Repeat the template-->
+      <% for(let count=0; count<tasklist.length; count++){%>
+        <tr class="d-flex">
+        <td class="text-center col-3 titlecolumn"><%= tasklist[count].title%></td>
+        <td class="text-center col-5"><%= tasklist[count].description%></td>
+        <td class="text-center col-2"><%= tasklist[count].due%></td>
+        <td class="text-center col-1">
+
+          <!--Creating edit button-->
+          <a href="/task-list/edit/<%= tasklist[count]._id %>"
+            class="btn btn-primary">
+            ✏️Edit</a>
+            </td>
+          <!--Creating delete button-->
+        <td class="text-center col-1">
+          <a href="/task-list/delete/<%= tasklist[count]._id %>"
+             class="btn btn-danger">
+            🗑️Delete</a>
+        </td>
+      </tr>   
+     <% } %>
+  </table>
+  <!--Creating button to add a task-->
+  <a href="/task-list/add" class="btn btn1 btn-dark" role="button">
+    ➕Add a Task
+  </a>
+
+
+
+
+    <!--Footer section-->
+    <footer>
+        <p>©️ 2022 by Callum Tait</p>
+    </footer>
+
+</body>
+</html>
